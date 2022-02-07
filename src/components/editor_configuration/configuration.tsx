@@ -1,5 +1,5 @@
 function Configuration() {
-    return <div className="configuration">Configuration</div>;
+    return <div className="configuration box">Editor Configuration</div>;
 }
 
 export default Configuration;

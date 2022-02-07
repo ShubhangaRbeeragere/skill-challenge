@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@500&display=swap");
 *,
 *::after,
 *::before {
@@ -8,12 +9,73 @@
 }
 
 body {
-  background-color: black;
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
+  color: white;
+  background-color: white;
   height: 100vh;
+  background-color: #240046;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.app {
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  -ms-grid-rows: 9% 8% 50% 30% !important;
+      grid-template-rows: 9% 8% 50% 30% !important;
+  -ms-grid-columns: 40% 58%;
+      grid-template-columns: 40% 58%;
+  gap: 1% 1%;
+      grid-template-areas: "navigation navigation" "configuration configuration" "challenge ace_editor" "result ace_editor";
+  height: 98vh;
+  width: 100vw;
+}
+
+.app .box {
+  background-color: #10002b;
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px;
+  font-size: x-large;
+  outline: 1px solid rgba(242, 0, 137, 0.1);
+}
+
+.app .navigation {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: navigation;
+}
+
+.app .challenge {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: challenge;
+}
+
+.app .configuration {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: configuration;
 }
 
 .app .ace_editor {
-  height: 100vh !important;
-  width: 100vw !important;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  grid-area: ace_editor;
+  height: 100% !important;
+  width: 100% !important;
+  border-radius: 10px;
+}
+
+.app .result {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: result;
 }
 /*# sourceMappingURL=index.css.map */

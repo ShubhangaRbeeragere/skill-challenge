@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@500&display=swap");
 *,
 *::after,
 *::before {
@@ -5,14 +6,60 @@
     margin: 0;
     padding: 0;
 }
+//variables
+$main_color: #10002b;
+$sub_color: #f20089;
 body {
-    background-color: black;
+    font-family: "Lato", sans-serif;
+    font-weight: 100;
+    color: white;
+    background-color: white;
     height: 100vh;
+    background-color: #240046;
+
+    display: grid;
+    place-items: center;
 }
 
 .app {
+    display: grid;
+    place-content: center;
+    grid-template-rows: 9% 8% 50% 30% !important;
+    grid-template-columns: 40% 58%;
+    gap: 1% 1%;
+    grid-template-areas:
+        "navigation navigation"
+        "configuration configuration"
+        "challenge ace_editor"
+        "result ace_editor";
+    height: 98vh;
+    width: 100vw;
+
+    //change styles globally
+    .box {
+        background-color: $main_color;
+        border-radius: 10px;
+        text-align: center;
+        padding: 10px;
+        font-size: x-large;
+        outline: 1px solid rgba($sub_color, 0.1);
+    }
+    .navigation {
+        grid-area: navigation;
+    }
+    .challenge {
+        grid-area: challenge;
+    }
+    .configuration {
+        grid-area: configuration;
+    }
     .ace_editor {
-        height: 100vh !important;
-        width: 100vw !important;
+        grid-area: ace_editor;
+        height: 100% !important;
+        width: 100% !important;
+        border-radius: 10px;
+    }
+    .result {
+        grid-area: result;
     }
 }

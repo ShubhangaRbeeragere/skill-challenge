@@ -7,22 +7,20 @@ import "ace-builds/src-noconflict/theme-solarized_dark";
 import "ace-builds/src-noconflict/keybinding-vim";
 export default function Editor() {
     return (
-        <div className="App">
-            <AceEditor
-                mode="javascript"
-                theme="solarized_dark"
-                onChange={(value) => {
-                    console.log(value);
-                }}
-                name="ace_editor"
-                keyboardHandler="vim"
-                fontSize={16}
-                setOptions={{
-                    enableBasicAutocompletion: true,
-                    enableLiveAutocompletion: true,
-                    enableSnippets: true,
-                }}
-            />
-        </div>
+        <AceEditor
+            mode="javascript"
+            theme="solarized_dark"
+            onChange={(value) => {
+                console.log(value);
+            }}
+            name="ace_editor"
+            keyboardHandler="vim"
+            fontSize={16}
+            setOptions={{
+                enableBasicAutocompletion: true,
+                enableLiveAutocompletion: true,
+                enableSnippets: true,
+            }}
+        />
     );
 }
