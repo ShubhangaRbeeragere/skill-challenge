@@ -7,42 +7,40 @@
     padding: 0;
 }
 //variables
-$main_color: #10002b;
-$sub_color: #f20089;
+// $main_color: #10002b;
+$main_color: #073642;
+// $sub_color: #f20089;
+$sub_color: #586e75;
 body {
     font-family: "Lato", sans-serif;
     font-weight: 100;
     color: white;
     background-color: white;
     height: 100vh;
-    background-color: #240046;
-
-    display: grid;
-    place-items: center;
+    background-color: $sub_color;
+    overflow: hidden;
 }
 
 .app {
     display: grid;
     place-content: center;
-    grid-template-rows: 9% 8% 50% 30% !important;
-    grid-template-columns: 40% 58%;
-    gap: 1% 1%;
+    grid-template-rows: 10% 10% 50% 30% !important;
+    grid-template-columns: 40% 60%;
     grid-template-areas:
         "navigation navigation"
         "configuration configuration"
         "challenge ace_editor"
         "result ace_editor";
-    height: 98vh;
+    height: 100vh;
     width: 100vw;
+    gap: 1px;
 
     //change styles globally
     .box {
         background-color: $main_color;
-        border-radius: 10px;
         text-align: center;
         padding: 10px;
         font-size: x-large;
-        outline: 1px solid rgba($sub_color, 0.1);
     }
     .navigation {
         grid-area: navigation;
@@ -57,7 +55,6 @@ body {
         grid-area: ace_editor;
         height: 100% !important;
         width: 100% !important;
-        border-radius: 10px;
     }
     .result {
         grid-area: result;
