@@ -6,11 +6,17 @@
     margin: 0;
     padding: 0;
 }
+//mixins
+@mixin place_center() {
+    display: grid;
+    place-items: center;
+}
+
 //variables
-// $main_color: #10002b;
 $main_color: #073642;
-// $sub_color: #f20089;
-$sub_color: #586e75;
+$main_dark: #002b36;
+// $sub_color: #586e75;
+$sub_color: #279b93;
 body {
     font-family: "Lato", sans-serif;
     font-weight: 100;
@@ -41,12 +47,30 @@ body {
         text-align: center;
         padding: 10px;
         font-size: x-large;
+
+        //this only applies to .result and .challenge
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        p {
+            font-weight: bold;
+        }
+        .window {
+            background-color: $main_dark;
+            height: 80%;
+            border-radius: 5px;
+            @include place_center();
+        }
     }
     .navigation {
         grid-area: navigation;
     }
     .challenge {
         grid-area: challenge;
+
+        .window {
+            background-color: $main_dark;
+        }
     }
     .configuration {
         grid-area: configuration;

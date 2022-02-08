@@ -14,7 +14,7 @@ body {
   color: white;
   background-color: white;
   height: 100vh;
-  background-color: #586e75;
+  background-color: #279b93;
   overflow: hidden;
 }
 
@@ -37,6 +37,27 @@ body {
   text-align: center;
   padding: 10px;
   font-size: x-large;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 10px;
+}
+
+.app .box p {
+  font-weight: bold;
+}
+
+.app .box .window {
+  background-color: #002b36;
+  height: 80%;
+  border-radius: 5px;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
 }
 
 .app .navigation {
@@ -50,6 +71,10 @@ body {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: challenge;
+}
+
+.app .challenge .window {
+  background-color: #002b36;
 }
 
 .app .configuration {
