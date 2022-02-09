@@ -1,3 +1,4 @@
+import "./challenge.css";
 function Challenge() {
     return (
         <div className="challenge box">

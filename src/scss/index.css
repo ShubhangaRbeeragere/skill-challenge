@@ -35,29 +35,12 @@ body {
 .app .box {
   background-color: #073642;
   text-align: center;
-  padding: 10px;
-  font-size: x-large;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  row-gap: 10px;
-}
-
-.app .box p {
-  font-weight: bold;
 }
 
 .app .box .window {
   background-color: #002b36;
   height: 80%;
   border-radius: 5px;
-  display: -ms-grid;
-  display: grid;
-  place-items: center;
 }
 
 .app .navigation {

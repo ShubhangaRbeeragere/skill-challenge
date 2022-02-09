@@ -5,6 +5,7 @@ import "ace-builds/src-noconflict/mode-javascript";
 import "ace-builds/src-noconflict/mode-c_cpp";
 import "ace-builds/src-noconflict/theme-solarized_dark";
 import "ace-builds/src-noconflict/keybinding-vim";
+import "./editor.css";
 export default function Editor() {
     return (
         <AceEditor
@@ -14,7 +15,7 @@ export default function Editor() {
                 console.log(value);
             }}
             name="ace_editor"
-            keyboardHandler="vim"
+            keyboardHandler=""
             fontSize={16}
             setOptions={{
                 enableBasicAutocompletion: true,

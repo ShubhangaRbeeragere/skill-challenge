@@ -1,3 +1,4 @@
+import "./result.css";
 function Result() {
     return (
         <div className="result box">

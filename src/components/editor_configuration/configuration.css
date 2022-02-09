@@ -1,0 +1,57 @@
+.configuration {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
+  padding-right: 10px;
+}
+
+.configuration .setting {
+  padding: 5px;
+  border-bottom: 2px solid skyblue;
+  border-left: 2px solid skyblue;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 5px;
+          column-gap: 5px;
+}
+
+.configuration .setting p {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.configuration .setting .dropdown {
+  color: black;
+}
+
+.configuration .setting .dropdown select {
+  font-size: 15px;
+  color: white;
+  height: 30px;
+  background-color: #279b93;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.configuration .setting .language__dropdown select {
+  width: 100px;
+}
+/*# sourceMappingURL=configuration.css.map */

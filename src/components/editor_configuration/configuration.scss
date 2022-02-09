@@ -1,0 +1,60 @@
+@mixin create_button {
+}
+//variables
+$font_size: 20px;
+$main_color: #073642;
+$main_dark: #002b36;
+$sub_color: #279b93;
+// $sub_color: #586e75;
+
+.configuration {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    column-gap: 10px;
+    padding-right: 10px;
+
+    //global settings
+    .setting {
+        padding: 5px;
+        border-bottom: 2px solid skyblue;
+        border-left: 2px solid skyblue;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        column-gap: 5px;
+        p {
+            font-size: $font_size;
+            font-weight: bold;
+        }
+        .dropdown {
+            color: black;
+            select {
+                font-size: $font_size - 5px;
+                color: white;
+                height: 30px;
+                background-color: $sub_color;
+                border: none;
+                border-radius: 5px;
+                text-align: center;
+            }
+        }
+        .language__dropdown {
+            select {
+                width: 100px;
+            }
+        }
+    }
+    .language {
+    }
+
+    .font {
+    }
+
+    .theme {
+    }
+
+    .mode {
+    }
+}
