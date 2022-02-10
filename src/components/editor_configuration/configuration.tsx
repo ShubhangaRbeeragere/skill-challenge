@@ -1,21 +1,30 @@
-import { useState } from "react";
-import Select from "react-select";
 import "./configuration.css";
+interface Settings {
+    language: string;
+    font: string;
+    mode: string;
+    theme: string;
+}
 
-function Configuration() {
-    const [language, setLanguage] = useState("java");
-    const [font, setFont] = useState("10");
-    const [mode, setMode] = useState("vim");
-    const [theme, setTheme] = useState("solarized_dark");
+function Configuration({
+    settings,
+    setSettings,
+}: {
+    settings: Settings;
+    setSettings: Function;
+}) {
     return (
         <div className="configuration box">
             <div className="language setting">
                 <p>language:</p>
                 <div className="language__dropdown dropdown">
                     <select
-                        value={language}
+                        value={settings.language}
                         onChange={(e: any) => {
-                            setLanguage(e.target.value);
+                            setSettings({
+                                ...settings,
+                                language: e.target.value,
+                            });
                         }}
                     >
                         <option value="c_cpp">C/C++</option>
@@ -32,15 +41,17 @@ function Configuration() {
                 <p>font:</p>
                 <div className="font__dropdown dropdown">
                     <select
-                        value={font}
+                        value={settings.font}
                         onChange={(e: any) => {
-                            setFont(e.target.value);
+                            setSettings({ ...settings, font: e.target.value });
                         }}
                     >
-                        <option value="10">10</option>
-                        <option value="12">12</option>
-                        <option value="14">14</option>
-                        <option value="16">16</option>
+                        <option value="10px">10</option>
+                        <option value="12px">12</option>
+                        <option value="14px">14</option>
+                        <option value="16px">16</option>
+                        <option value="18px">18</option>
+                        <option value="20px">20</option>
                     </select>
                 </div>
             </div>
@@ -49,13 +60,15 @@ function Configuration() {
                 <p>theme:</p>
                 <div className="theme__dropdown dropdown">
                     <select
-                        value={theme}
+                        value={settings.theme}
                         onChange={(e: any) => {
-                            setTheme(e.target.value);
+                            setSettings({ ...settings, theme: e.target.value });
                         }}
                     >
                         <option value="solarized_dark">Solarized Dark</option>
                         <option value="solarized_light">Solarized Light</option>
+                        <option value="terminal">terminal</option>
+                        <option value="gruvbox">Gruv Box</option>
                     </select>
                 </div>
             </div>
@@ -64,13 +77,13 @@ function Configuration() {
                 <p>mode:</p>
                 <div className="mode__dropdown dropdown">
                     <select
-                        value={mode}
+                        value={settings.mode}
                         onChange={(e: any) => {
-                            setMode(e.target.value);
+                            setSettings({ ...settings, mode: e.target.value });
                         }}
                     >
                         <option value="vim">Vim</option>
-                        <option value="solarized_light">Normal</option>
+                        <option value="normal">Normal</option>
                     </select>
                 </div>
             </div>
