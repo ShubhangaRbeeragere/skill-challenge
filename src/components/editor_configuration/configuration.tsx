@@ -29,9 +29,7 @@ function Configuration({
                     >
                         <option value="c_cpp">C/C++</option>
                         <option value="javascript">Javascript</option>
-                        <option selected value="java">
-                            Java
-                        </option>
+                        <option value="java">Java</option>
                         <option value="python">Python</option>
                     </select>
                 </div>
